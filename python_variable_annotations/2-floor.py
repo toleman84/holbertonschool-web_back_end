@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """doc"""
 
+
 def floor(n: float) -> int:
     """
     This function takes a float n as argument
