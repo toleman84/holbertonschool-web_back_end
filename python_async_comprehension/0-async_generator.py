@@ -5,9 +5,11 @@
 
 import asyncio
 import random
+from types import NoneType
+from typing import Generator
 
 
-async def async_generator() -> float:
+async def async_generator() -> Generator[float, NoneType, NoneType]:
     """
         A coroutine called async_generator that takes no arguments
 
