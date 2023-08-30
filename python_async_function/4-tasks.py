@@ -17,6 +17,6 @@ async def task_wait_n(n: int, max_delay: int) -> List[float]:
         without using `sort()` because of concurrency.
     """
     task: List[asyncio.Task] = [task_wait_random(max_delay) for _ in range(n)]
-    delay: List[float] = [await task for task in asyncio.as_completed((task))]
+    delay: List[float] = await asyncio.gather(*task)
 
     return sorted(delay)
