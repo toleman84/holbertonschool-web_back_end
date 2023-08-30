@@ -7,7 +7,7 @@ import asyncio
 import random
 
 
-async def async_generator():
+async def async_generator() -> float:
     """
         A coroutine called async_generator that takes no arguments
 
