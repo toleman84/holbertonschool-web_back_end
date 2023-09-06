@@ -17,4 +17,5 @@ def list_all(mongo_collection) -> list:
     list_all_collection: list = []
     for collection in mongo_collection.find():
         list_all_collection.append(collection)
+
     return list_all_collection
