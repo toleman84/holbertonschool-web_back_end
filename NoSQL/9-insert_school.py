@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """doc"""
 
-import pymongo
-
 
 def insert_school(mongo_collection, **kwargs):
     """
@@ -15,7 +13,6 @@ def insert_school(mongo_collection, **kwargs):
         Returns:
             The new _id of the document.
     """
-    document = {key: value for key, value in kwargs.items()}
-    mongo_collection.insert_one(document)
+    document = mongo_collection.insert_one(kwargs)
 
-    return document['_id']
+    return document.inserted_id
