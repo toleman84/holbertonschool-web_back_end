@@ -1,10 +1,10 @@
-#!/usr/bin/env Python3
+#!/usr/bin/env python3
 """doc"""
 
 import pymongo
 
 
-def list_all(mongo_collection):
+def list_all(mongo_collection) -> list:
     """
         Lists all documents in a collection.
 
@@ -14,7 +14,7 @@ def list_all(mongo_collection):
         Returns:
             A list of all documents in the collection.
     """
-    list_all_collection = []
+    list_all_collection: list = []
     for collection in mongo_collection.find():
         list_all_collection.append(collection)
     return list_all_collection
