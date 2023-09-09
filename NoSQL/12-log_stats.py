@@ -30,5 +30,5 @@ if __name__ == "__main__":
     print("{} logs".format(num_logs))
     print("Methods:")
     for method, num_docs in n_docs_per_method.items():
-        print(f"\tmethod", method, "\t", num_docs)
+        print(f"\tmethod {method}: {num_docs}") #f'\tmethod {method}: {count_method}'
     print(f"{num_docs_with_get_and_status} status check")
