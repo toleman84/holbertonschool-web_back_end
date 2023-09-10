@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""doc"""
+"""
+    doc
+"""
+
+import csv
+import math
+from typing import List
+
 
 def index_range(page: int, page_size: int):
     """
@@ -15,10 +22,6 @@ def index_range(page: int, page_size: int):
     end_index = start_index + page_size
 
     return (start_index, end_index)
-
-import csv
-import math
-from typing import List
 
 
 class Server:
@@ -56,8 +59,8 @@ class Server:
         dataset = self.dataset()
         num_rows = len(dataset)
         start_index, end_index = index_range(page, page_size)
-        
+
         if start_index >= num_rows:
             return []
-        
+
         return dataset[start_index:end_index]
