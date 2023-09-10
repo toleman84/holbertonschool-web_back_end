@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""doc"""
+"""
+    doc
+"""
 
 
 def index_range(page: int, page_size: int):
