@@ -18,6 +18,7 @@ module.exports = {
     },
     plugins: ['jest'],
     rules: {
+        "jest/no-conditional-expect/no-conditional-expect-with-ternary": "off",
         'no-console': 'off',
         'no-shadow': 'off',
         'no-restricted-syntax': [
