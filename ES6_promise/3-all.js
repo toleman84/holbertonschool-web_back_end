@@ -3,12 +3,13 @@ import { uploadPhoto, createUser } from "./utils";
 export default function handleProfileSignup() {
   // Create a promise chain.
   Promise.all([uploadPhoto(), createUser()])
-    .then((responses) => {
+    .then(([photoResponse, userResponse]) => {
       // Get the response bodies from the promises.
-      const [photoUrl, user] = responses;
+      const { body } = photoResponse;
+      const { firstName, lastName } = userResponse;
 
       // Log the first name, last name, and photo URL to the console.
-      console.log(`${photoUrl} ${user.firstName} ${user.lastName}`);
+      console.log(`${body} ${firstName} ${lastName}`);
     })
     .catch((error) => {
       // Log an error message to the console.
