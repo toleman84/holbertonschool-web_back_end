@@ -1,4 +1,4 @@
-import { uploadPhoto, createUser } from "./utils";
+import { uploadPhoto, createUser } from './utils';
 
 export default function handleProfileSignup() {
   // Create a promise chain.
@@ -13,6 +13,6 @@ export default function handleProfileSignup() {
     })
     .catch(() => {
       // Log an error message to the console.
-      console.log("Signup system offline");
+      console.log('Signup system offline');
     });
 }
