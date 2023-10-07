@@ -8,10 +8,8 @@ export default async function handleProfileSignup(firstName, lastName, fileName)
   ];
   const results = await Promise.allSettled(promises);
 
-  return results.map((result) => {
-    return {
-      status: result.status,
-      value: result.value || result.reason,
-    };
-  });
+  return results.map((result) => ({
+    status: result.status,
+    value: result.value || result.reason,
+  }));
 }
