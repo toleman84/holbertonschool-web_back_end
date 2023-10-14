@@ -1,7 +1,7 @@
 export default function cleanSet(set, startString) {
   const filteredSet = new Set();
 
-  if (startString === '') {
+  if (typeof startString !== 'string' || startString === '') {
     return '';
   }
 
