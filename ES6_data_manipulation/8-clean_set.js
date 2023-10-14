@@ -6,7 +6,7 @@ export default function cleanSet(set, startString) {
   }
 
   set.forEach((value) => {
-    if (value.startsWith(startString)) {
+    if (typeof startString !== 'string' || value.startsWith(startString)) {
       filteredSet.add(value.slice(startString.length));
     }
   });
